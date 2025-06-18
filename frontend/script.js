@@ -1,27 +1,30 @@
 let streak = Number(sessionStorage.getItem("streak")) || 0;
 
 async function translate_clicked() {
-	const input = document.getElementById("input").value;
+	const user_input = document.getElementById("user_input").value;
 	const direction = document.getElementById("direction").value;
 	const resultEl = document.getElementById("result");
 	resultEl.textContent = "Now loading result...";
-	
-	try{
+
+	try {
 		const res = await fetch("https://latin-numerals-api.onrender.com/translate", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({input, direction}),
+			body: JSON.stringify({ user_input, direction }),
 		});
-		const data  = await res.json();
+
+		const data = await res.json();
+
 		resultEl.textContent = data.result;
 	} catch (e) {
 		resultEl.textContent = "Error: " + e.message;
 	}
 }
 
+
 async function submit_answer_clicked() {
 	const question_number = document.getElementById("question_number").textContent;
-	const input = document.getElementById("input").value;
+	const user_input = document.getElementById("user_input").value;
 	const resultEl = document.getElementById("result");
 	resultEl.textContent = "Now loading result...";
 	
@@ -29,7 +32,7 @@ async function submit_answer_clicked() {
 		const res = await fetch("https://latin-numerals-api.onrender.com/quiz_answer", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({question_number, input, streak}),
+			body: JSON.stringify({question_number, user_input, streak}),
 	});
 		const data =  await res.json();
 		resultEl.textContent = data.result;
@@ -43,7 +46,7 @@ async function submit_answer_clicked() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const questionEl = document.getElementById("question_number");
-  if (!questionEl) return; // Μην κάνεις τίποτα αν δεν είναι quiz page
+  if (!questionEl) return; 
 
   fetch("https://latin-numerals-api.onrender.com/quiz_query", {
     method: "POST",
