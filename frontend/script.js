@@ -17,7 +17,6 @@ async function translate_clicked() {
 	} catch (e) {
 		resultEl.textContent = "Error: " + e.message;
 	}
-	
 }
 
 async function submit_answer_clicked() {
@@ -43,26 +42,29 @@ async function submit_answer_clicked() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const questionEl = document.getElementById("question_number");
+  if (!questionEl) return; // Μην κάνεις τίποτα αν δεν είναι quiz page
+
   fetch("https://latin-numerals-api.onrender.com/quiz_query", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({}) 
+    body: JSON.stringify({})
   })
   .then(response => {
-	 
     if (!response.ok) {
-		document.getElementById("question_number").textContent = "Network response was not ok";
-		throw new Error("Network response was not ok");
-		}
+      questionEl.textContent = "Network response was not ok";
+      throw new Error("Network response was not ok");
+    }
     return response.json();
   })
   .then(data => {
     console.log("Random quiz number:", data.number);
-    document.getElementById("question_number").textContent = data.number;
+    questionEl.textContent = data.number;
   })
   .catch(error => {
     console.error("Fetch error:", error);
   });
 });
+

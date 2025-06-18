@@ -20,7 +20,7 @@ def root():
 
 @router.post("/translate")
 def translate(req: TranslationRequest):
-    result = handle_translation_input(req.user_input , req.direction)
+    result = handle_translation_input(req.user_input, req.direction)
     return {"result": result}
 
 
