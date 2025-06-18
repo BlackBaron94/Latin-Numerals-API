@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Latin Numerals Translator</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav class="main-menu">
+			<a href="index.html" class="menu-item">Home</a>
+			<a href="translator.html" class="menu-item">Translator</a>
+			<a href="quiz.html" class="menu-item">Quiz</a>
+			<a href="rules.html" class="menu-item">Rules</a>
+		</nav>
+		<div class="container">
+			<h1>Latin Numerals Translator</h1>
+			<input id="input" placeholder="Write number/numeral here"/>
+			<br>
+			<select id="direction">
+				<option>Latin to Decimal</option>
+				<option>Decimal to Latin</option>
+			</select>
+			<br>
+			<button onclick="translate_clicked()">Translate</button>
+			<br>
+			<p id="result">Type a numeral/decimal to begin</p>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
