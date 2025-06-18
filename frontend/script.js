@@ -15,7 +15,7 @@ async function translate_clicked() {
 
 		const data = await res.json();
 
-		resultEl.textContent = data.result;
+		resultEl.innerHTML = data.result;
 	} catch (e) {
 		resultEl.textContent = "Error: " + e.message;
 	}
