@@ -56,9 +56,7 @@ async function fetchNewQuizNumber() {
 
 	try {
 		const res = await fetch("https://latin-numerals-api.onrender.com/quiz_query", {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({})
+			method: "GET"
 		});
 
 		if (!res.ok) {
