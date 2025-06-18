@@ -24,7 +24,7 @@ def translate(req: TranslationRequest):
     return {"result": result}
 
 
-@router.post("/quiz_query")
+@router.get("/quiz_query")
 def get_number():
     number = randomize()
     return {"number": number}
