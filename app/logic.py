@@ -406,16 +406,16 @@ def handle_translation_input(user_input: str, direction: str) -> str:
                 return "Invalid input"
             # Main case of mistake, e.g. VV
             elif len(result) == 2:
-                return "Invalid input,\n'" + result[1] + "' wrongfully used."
+                return "Invalid input,<br>'" + result[1] + "' wrongfully used."
 
             # Special case of rule #3 mistake
             else:
                 return str(
-                    "Invalid input,\n'"
+                    "Invalid input,<br>'"
                     + result[1]
                     + "' wrongfully used before '"
                     + result[2]
-                    + "'. \nCheck rule #3."
+                    + "'. <br>Check rule #3."
                 )
 
     else:
@@ -465,7 +465,7 @@ def handle_quiz_input(
     # If user input is latin, it's been purified so it matches perfectly
     if user_input == correct_answer:
 
-        result_message = "Your answer is correct!\n{0} is {1}".format(
+        result_message = "Your answer is correct!<br>{0} is {1}".format(
             question_number, user_input
         )
         # Adds +1 to correct streak
@@ -475,22 +475,22 @@ def handle_quiz_input(
         if quiz_streak > 19:
             result_message = (
                 result_message
-                + "\n"
+                + "<br>"
                 + str(quiz_streak)
-                + " correct answers streak!!! \nYou're on FIRE!!!"
+                + " correct answers streak!!! <br>You're on FIRE!!!"
             )
 
         elif quiz_streak > 9:
             result_message = (
                 result_message
-                + "\n"
+                + "<br>"
                 + str(quiz_streak)
-                + " correct answers streak!! \nYou're on a roll!!"
+                + " correct answers streak!! <br>You're on a roll!!"
             )
         elif quiz_streak > 4:
             result_message = (
                 result_message
-                + "\n"
+                + "<br>"
                 + str(quiz_streak)
                 + " correct answers streak!"
             )
@@ -498,7 +498,7 @@ def handle_quiz_input(
     # Answer was incorrect
     else:
         # Shows input's correct answer as opposed to user's wrong answer
-        result_message = "Your answer is wrong.\n{0} is {1}, not '{2}'".format(
+        result_message = "Your answer is wrong.<br>{0} is {1}, not '{2}'".format(
             question_number, correct_answer, initial_input
         )
         # Resets correct streak

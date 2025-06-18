@@ -1,4 +1,4 @@
-let quiz_streak = 0;
+let quiz_streak = Number(sessionStorage.getItem("quiz_streak")) || 0;
 
 async function translate_clicked() {
 	const user_input = document.getElementById("user_input").value;
@@ -23,7 +23,6 @@ async function translate_clicked() {
 
 
 async function submit_answer_clicked() {
-	console.log("Quiz streak in beningin is " + quiz_streak);
 	const question_number = document.getElementById("question_number").textContent;
 	const user_input = document.getElementById("user_input").value;
 	const resultEl = document.getElementById("result");
@@ -36,9 +35,9 @@ async function submit_answer_clicked() {
 			body: JSON.stringify({question_number, user_input, quiz_streak}),
 	});
 		const data =  await res.json();
-		resultEl.textContent = data.result;
+		resultEl.innerHTML = data.result;
 		quiz_streak = data.quiz_streak;
-		console.log("Quiz streak is now: " + quiz_streak);
+		sessionStorage.setItem("quiz_streak", quiz_streak);
 	} catch (e) {
 		resultEl.textContent = "Error: " + e.message;
 	}
