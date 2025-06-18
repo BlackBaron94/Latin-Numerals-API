@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const inputEl = document.getElementById("input");
+const inputEl = document.getElementById("user_input");
 if (inputEl) {
   const isTranslatorPage = document.getElementById("direction") !== null;
   const handler = isTranslatorPage ? translate_clicked : submit_answer_clicked;
