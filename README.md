@@ -160,13 +160,10 @@ Index.html -> Άνοιγμα με browser και περιήγηση.
 
 --------
 
-### `POST /quiz_query`
+### `GET /quiz_query`
 
 Επιστρέφει τυχαίο αριθμό ως ερώτηση μετάφρασης για το Quiz, 50% πιθανότητα για λατινικό και 50% για δεκαδικό αριθμό, στο εύρος 1-3999. 
 
-**Request**
-
-Το συγκεκριμένο endpoint δεν απαιτεί κάποια παράμετρο στο Request του.
 
 **Response**
 
@@ -176,14 +173,6 @@ Index.html -> Άνοιγμα με browser και περιήγηση.
 
 <details>
   <summary>Παράδειγμα /quiz_query</summary>
-  
-`Request`
-
-```json
-{
-  
-}
-```
 
 `Response`
 
