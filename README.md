@@ -35,7 +35,7 @@
 * [![Python][Python-icon]][Python-url]
 * [![FastAPI][FastAPI-icon]][FastAPI-url]
 * [![Pydantic][Pydantic-icon]][Pydantic-url]
-* <a href="https://www.uvicorn.org/"><img src="https://www.uvicorn.org/uvicorn.png" alt="Uvicorn-Logo" width="22px"/></a> Uvicorn
+* <a href="https://www.uvicorn.org/"><img src="https://www.uvicorn.org/uvicorn.png" alt="Uvicorn-Logo" width="22px"/></a> [![Uvicorn][Uvicorn-icon]][Uvicorn-url]
 * [![Pytest][Pytest-icon]][Pytest-url]
 
 **Frontend:**
@@ -284,6 +284,8 @@ This project is licensed under the MIT License – see the [LICENSE](./LICENSE) 
 [FastAPI-url]: https://fastapi.tiangolo.com/
 [Pydantic-icon]: https://img.shields.io/badge/%20-Pydantic-E92063?logo=pydantic&logoColor=white-Pydantic&style=plastic
 [Pydantic-url]: https://docs.pydantic.dev/latest/
+[Uvicorn-icon]: https://img.shields.io/badge/Uvicorn-blue
+[Uvicorn-url]: https://www.uvicorn.org/
 [Pytest-icon]: https://img.shields.io/badge/-PyTest-3670A0?logo=pytest&logoColor=white&style=plastic
 [Pytest-url]: https://docs.pytest.org/en/stable/
 [HTML-icon]: https://img.shields.io/badge/%20-HTML-blue?logo=HTML5&logoColor=white-HTML&style=plastic
