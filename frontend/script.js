@@ -19,6 +19,9 @@ async function translate_clicked() {
 	} catch (e) {
 		resultEl.textContent = "Error: " + e.message;
 	}
+	const input_area = document.getElementById("user_input");
+	input_area.value = "";
+	input_area.focus();
 }
 
 
@@ -42,6 +45,9 @@ async function submit_answer_clicked() {
 		resultEl.textContent = "Error: " + e.message;
 	}
 	fetchNewQuizNumber();
+	const input_area = document.getElementById("user_input");
+	input_area.value = "";
+	input_area.focus();
 }
 
 async function fetchNewQuizNumber() {
@@ -72,3 +78,17 @@ async function fetchNewQuizNumber() {
 document.addEventListener("DOMContentLoaded", () => {
 	fetchNewQuizNumber();
 });
+
+
+const inputEl = document.getElementById("input");
+if (inputEl) {
+  const isTranslatorPage = document.getElementById("direction") !== null;
+  const handler = isTranslatorPage ? translate_clicked : submit_answer_clicked;
+
+  inputEl.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handler(); 
+    }
+  });
+}
