@@ -28,21 +28,30 @@
 
 Η εφαρμογή έχει ανεβεί στο Render και είναι πλήρως λειτουργική.
 
-### Τεχνολογίες και βιβλιοθήκες που χρησιμοποιήθηκαν
+### Τεχνολογίες και βιβλιοθήκες που χρησιμοποιήθηκαν:
 
-**Backend:**
+### Backend:
 
-* [![Python][Python-icon]][Python-url]
-* [![FastAPI][FastAPI-icon]][FastAPI-url]
-* [![Pydantic][Pydantic-icon]][Pydantic-url]
-* <a href="https://www.uvicorn.org/"><img src="https://www.uvicorn.org/uvicorn.png" alt="Uvicorn-Logo" width="22px"/></a> [![Uvicorn][Uvicorn-icon]][Uvicorn-url]
-* [![Pytest][Pytest-icon]][Pytest-url]
+<a href="https://python.org/"> <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54&style=plastic" alt="Python-Logo" width=100px/></a>
 
-**Frontend:**
+<a href="https://fastapi.tiangolo.com/"> <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&style=plastic" alt="FastAPI-Logo" width=100px/></a>
 
-* [![HTML][HTML-icon]][HTML-url]
-* [![CSS][CSS-icon]][CSS-url]
-* [![JS][JS-icon]][JS-url]
+<a href="https://docs.pydantic.dev/latest/"> <img src="https://img.shields.io/badge/%20-Pydantic-E92063?logo=pydantic&logoColor=white-Pydantic&style=plastic" alt="Pydantic-Logo" width=100px height=30px/></a>
+
+<a href="https://www.uvicorn.org/"><img src="https://www.uvicorn.org/uvicorn.png" alt="Uvicorn-Logo" width="35px"/><img src="https://img.shields.io/badge/Uvicorn-blue" alt="Uvicorn-Logo-Text" width=80px></a>
+
+<a href="https://docs.pytest.org/en/stable/"> <img src="https://img.shields.io/badge/-PyTest-3670A0?logo=pytest&logoColor=white&style=plastic" alt="Pytest-Logo" width=100px/></a>
+
+--------
+
+#### Frontend:
+
+<a href="https://www.w3schools.com/html/"> <img src="https://img.shields.io/badge/%20-HTML-blue?logo=HTML5&logoColor=white-HTML&style=plastic" alt="HTML-Logo" width=100px/></a>
+
+<a href="https://www.w3schools.com/css/"> <img src="https://img.shields.io/badge/%20-CSS-663399?logo=CSS&logoColor=white-CSS&style=plastic" alt="CSS-Logo" width=90px/></a>
+
+<a href="https://www.javascript.com/"> <img src="https://img.shields.io/badge/-JavaScript-blue?logo=javascript&style=plastic" alt="JS-Logo" width=120px height=30px/></a>
+
 
 ### Αρχεία του Project
 
@@ -277,20 +286,3 @@ Project Link: [Latin Numerals API](https://github.com/BlackBaron94/Latin-Numeral
 This project is licensed under the MIT License – see the [LICENSE](./LICENSE) file for details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-[Python-icon]: https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54&style=plastic
-[Python-url]: https://python.org/
-[FastAPI-icon]: https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&style=plastic
-[FastAPI-url]: https://fastapi.tiangolo.com/
-[Pydantic-icon]: https://img.shields.io/badge/%20-Pydantic-E92063?logo=pydantic&logoColor=white-Pydantic&style=plastic
-[Pydantic-url]: https://docs.pydantic.dev/latest/
-[Uvicorn-icon]: https://img.shields.io/badge/Uvicorn-blue
-[Uvicorn-url]: https://www.uvicorn.org/
-[Pytest-icon]: https://img.shields.io/badge/-PyTest-3670A0?logo=pytest&logoColor=white&style=plastic
-[Pytest-url]: https://docs.pytest.org/en/stable/
-[HTML-icon]: https://img.shields.io/badge/%20-HTML-blue?logo=HTML5&logoColor=white-HTML&style=plastic
-[HTML-url]: https://www.w3schools.com/html/
-[CSS-icon]: https://img.shields.io/badge/%20-CSS-663399?logo=CSS&logoColor=white-CSS&style=plastic
-[CSS-url]: https://www.w3schools.com/css/
-[JS-icon]: https://img.shields.io/badge/-JavaScript-blue?logo=javascript&style=plastic
-[JS-url]: https://www.javascript.com/
