@@ -32,4 +32,4 @@ def get_number():
 @router.post("/quiz_answer")
 def check_quiz_answer(req: CheckQuizAnswerRequest):
     message, quiz_streak = handle_quiz_input(req.question_number, req.user_input , req.quiz_streak)
-    return {"result": message, "streak": quiz_streak}
+    return {"result": message, "quiz_streak": quiz_streak}

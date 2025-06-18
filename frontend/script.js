@@ -1,4 +1,4 @@
-let streak = Number(sessionStorage.getItem("streak")) || 0;
+let quiz_streak = 0;
 
 async function translate_clicked() {
 	const user_input = document.getElementById("user_input").value;
@@ -23,6 +23,7 @@ async function translate_clicked() {
 
 
 async function submit_answer_clicked() {
+	console.log("Quiz streak in beningin is " + quiz_streak);
 	const question_number = document.getElementById("question_number").textContent;
 	const user_input = document.getElementById("user_input").value;
 	const resultEl = document.getElementById("result");
@@ -32,42 +33,43 @@ async function submit_answer_clicked() {
 		const res = await fetch("https://latin-numerals-api.onrender.com/quiz_answer", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({question_number, user_input, streak}),
+			body: JSON.stringify({question_number, user_input, quiz_streak}),
 	});
 		const data =  await res.json();
 		resultEl.textContent = data.result;
-		streak = data.streak;
-		sessionStorage.setItem("streak", streak);
+		quiz_streak = data.quiz_streak;
+		console.log("Quiz streak is now: " + quiz_streak);
 	} catch (e) {
 		resultEl.textContent = "Error: " + e.message;
 	}
-	
+	fetchNewQuizNumber();
+}
+
+async function fetchNewQuizNumber() {
+	const questionEl = document.getElementById("question_number");
+	if (!questionEl) return;
+
+	try {
+		const res = await fetch("https://latin-numerals-api.onrender.com/quiz_query", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({})
+		});
+
+		if (!res.ok) {
+			questionEl.textContent = "Network response was not ok";
+			throw new Error("Network response was not ok");
+		}
+
+		const data = await res.json();
+		console.log("Random quiz number:", data.number);
+		questionEl.textContent = data.number;
+
+	} catch (error) {
+		console.error("Fetch error:", error);
+	}
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const questionEl = document.getElementById("question_number");
-  if (!questionEl) return; 
-
-  fetch("https://latin-numerals-api.onrender.com/quiz_query", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({})
-  })
-  .then(response => {
-    if (!response.ok) {
-      questionEl.textContent = "Network response was not ok";
-      throw new Error("Network response was not ok");
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log("Random quiz number:", data.number);
-    questionEl.textContent = data.number;
-  })
-  .catch(error => {
-    console.error("Fetch error:", error);
-  });
+	fetchNewQuizNumber();
 });
-
