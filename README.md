@@ -115,7 +115,11 @@
 
 **Frontend (Static Site)**
 
-Index.html -> Άνοιγμα με browser και περιήγηση.
+1. Clone του repo
+   ```sh
+   git clone https://github.com/BlackBaron94/Latin-Numerals-API.git
+   ```
+2. Άνοιγμα του αρχείου frontend/index.html με browser και περιήγηση.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -233,6 +237,9 @@ Index.html -> Άνοιγμα με browser και περιήγηση.
 
 
 ## Χρήση
+
+Υπάρχει διαθέσιμο short video demo του API και του Web App <a href="https://drive.google.com/file/d/18Q37BlkLpucUDJbaBSIKAfruFPdDpxsf/view?usp=drive_link">εδώ</a>.
+
 **API**
 
 Δέχεται POST /translate, /quiz_answer και GET /quiz_query.
