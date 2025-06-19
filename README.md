@@ -233,13 +233,39 @@ Index.html -> Άνοιγμα με browser και περιήγηση.
 
 
 ## Χρήση
+**API**
+
+Δέχεται POST /translate, /quiz_answer και GET /quiz_query.
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/BlackBaron94/images/main/Latin-Numerals-API/Swagger-UI.jpg" alt="Swagger-UI" width="750"/>
+</div>
 
 **Frontend**
 
 1. Home - Βασικό μενού με βασική επεξήγηση των λειτουργιών.
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/BlackBaron94/images/main/Latin-Numerals-API/Home-page.jpg" alt="Home-page" width="750"/>
+</div>
+
 2. Translator - Λαμβάνει αριθμό, επιλογή κατεύθυνση μετάφρασης από τις 2 διαθέσιμες επιλογές, και μεταφράζει με click στο Translate/Enter.
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/BlackBaron94/images/main/Latin-Numerals-API/Translator-Page.jpg" alt="Translator-Page" width="750"/>
+</div>
+
 3. Quiz - Εμφανίζει τυχαίο αριθμό, είτε σε λατινικό αριθμό είτε σε δεκαδικό και δέχεται απάντηση με εισαγωγή και click στο Submit/Enter.
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/BlackBaron94/images/main/Latin-Numerals-API/Quiz-Page.jpg" alt="Quiz-Page" width="750"/>
+</div>
+
 4. Rules - Εμφανίζει πίνακα με αντιστοίχιση του κάθε λατινικού αριθμού με δεκαδικό και τους κανόνες γραφής και ανάγνωσης λατινικών αριθμών.
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/BlackBaron94/images/main/Latin-Numerals-API/Rules-Page.jpg" alt="Rules-Page" width="750"/>
+</div>
 
 <i> **Σημείωση:**  
  Το API του Render μπορεί να χρειαστεί 30–50 δευτερόλεπτα για να ξυπνήσει και να απαντήσει.
